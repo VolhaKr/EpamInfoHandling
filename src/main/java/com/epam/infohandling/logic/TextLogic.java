@@ -8,6 +8,10 @@ public class TextLogic {
         throw new UnsupportedOperationException();
     }
 
+    public Composite reverse(Composite text) {
+        throw new UnsupportedOperationException();
+    }
+
     public String restore(Composite text) {
         throw new UnsupportedOperationException();
     }

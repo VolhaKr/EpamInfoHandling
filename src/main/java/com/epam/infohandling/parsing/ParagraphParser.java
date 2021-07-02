@@ -3,9 +3,9 @@ package com.epam.infohandling.parsing;
 import com.epam.infohandling.model.Composite;
 
 public class ParagraphParser extends AbstractParser {
+    SPLITTER = "[.|!|?|...]]";
 
-    @Override
-    public Composite parse(String text) {
-        throw new UnsupportedOperationException();
+    public ParagraphParser(Parser successor) {
+        super(successor);
     }
 }
