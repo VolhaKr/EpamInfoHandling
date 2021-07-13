@@ -3,6 +3,8 @@ package com.epam.infohandling.parsing;
 public class ChainBuilder {
 
     public Parser build(){
-        throw new UnsupportedOperationException();
+
+       return new TextParser(new ParagraphParser(new SentenceParser()));
+       // throw new UnsupportedOperationException();
     }
 }

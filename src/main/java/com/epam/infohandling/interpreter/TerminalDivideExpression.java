@@ -4,6 +4,7 @@ public class TerminalDivideExpression implements Expression {
 
     @Override
     public void interpret(Context context) {
-        throw new UnsupportedOperationException();
+context.pushValue(context.popValue()/context.popValue());
+      //  throw new UnsupportedOperationException();
     }
 }
