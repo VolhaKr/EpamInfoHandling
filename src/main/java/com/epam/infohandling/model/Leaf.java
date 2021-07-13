@@ -4,6 +4,16 @@ import java.util.Objects;
 
 public class Leaf implements Component {
     private String value;
+    private LeafType leafType;
+
+    public String getValue() {
+        return value;
+    }
+
+    public Leaf(String value, LeafType leafType) {
+        this.value = value;
+        this.leafType = leafType;
+    }
 
     public Leaf(String value) {
 this.value = value;

@@ -11,7 +11,13 @@ public class TextParser extends AbstractParser {
     }
 
     @Override
-    protected String getSplitter() {
-        return SPLITTER;
+    public Composite parse(String text) {
+        Composite composite = new Composite();
+        String parts[] = text.split(SPLITTER);
+        for ( String part : parts ) {
+            Composite inner = getSuccessor().parse(part);
+            composite.add(inner);
+        }
+        return composite;
     }
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Composite implements Component {
+    String value;
+
     private List <Component> components = new ArrayList<Component>();
 
     @Override
@@ -17,7 +19,10 @@ public class Composite implements Component {
 
     @Override
     public void add(Component component) {
-        System.out.println("Component -> add component");
+        System.out.println("Component -> add component "+ component);
+        if (component instanceof Leaf){
+            System.out.println("Component -> add component Leaf "+ ((Leaf)component).getValue().toString());
+        }
         components.add(component);
     }
 
